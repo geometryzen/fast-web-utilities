@@ -1,7 +1,7 @@
 {
-    "name": "@geometryzen/my-lib",
+    "name": "@geometryzen/fast-web-utilities",
     "version": "0.9.0",
-    "description": "My Library",
+    "description": "@microsoft/fast-web-utilities as system module",
     "main": "dist/cjs/index.js",
     "types": "dist/index.d.ts",
     "publishConfig": {
@@ -17,29 +17,32 @@
         "lint": "eslint . --ext .ts",
         "pages": "npm run docs:typedoc && gh-pages -d docs",
         "pretest": "npm run build",
-        "prepublishOnly": "npm run build && npm run test && npm run lint && npm run pages",
+        "prepublishOnly": "npm run build && npm run lint && npm run pages",
         "test": "jest"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/geometryzen/my-lib.git"
+        "url": "git+https://github.com/geometryzen/fast-web-utilities.git"
     },
     "author": "David Geo Holmes",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/geometryzen/my-lib/issues"
+        "url": "https://github.com/geometryzen/fast-web-utilities/issues"
     },
-    "homepage": "https://github.com/geometryzen/my-lib#readme",
+    "homepage": "https://github.com/geometryzen/fast-web-utilities#readme",
+    "dependencies": {
+        "@microsoft/fast-web-utilities": "5.0.2"
+    },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^22.0.2",
         "@rollup/plugin-node-resolve": "^14.1.0",
         "@rollup/plugin-typescript": "^8.5.0",
-        "@types/jest": "^29.1.0",
+        "@types/jest": "^29.1.1",
         "@typescript-eslint/eslint-plugin": "^5.38.1",
         "@typescript-eslint/parser": "^5.38.1",
         "eslint": "^8.24.0",
         "gh-pages": "^4.0.0",
-        "jest": "^29.1.1",
+        "jest": "^29.1.2",
         "open-cli": "^7.0.1",
         "rollup-plugin-dts": "^4.2.2",
         "rollup-plugin-peer-deps-external": "^2.2.4",
